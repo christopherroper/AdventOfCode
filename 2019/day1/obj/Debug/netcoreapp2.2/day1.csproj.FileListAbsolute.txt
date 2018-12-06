@@ -1,0 +1,11 @@
+/Users/croper/portfolio/AdventOfCode/2019/day1/bin/Debug/netcoreapp2.2/day1.deps.json
+/Users/croper/portfolio/AdventOfCode/2019/day1/bin/Debug/netcoreapp2.2/day1.runtimeconfig.json
+/Users/croper/portfolio/AdventOfCode/2019/day1/bin/Debug/netcoreapp2.2/day1.runtimeconfig.dev.json
+/Users/croper/portfolio/AdventOfCode/2019/day1/bin/Debug/netcoreapp2.2/day1.dll
+/Users/croper/portfolio/AdventOfCode/2019/day1/bin/Debug/netcoreapp2.2/day1.pdb
+/Users/croper/portfolio/AdventOfCode/2019/day1/obj/Debug/netcoreapp2.2/day1.csprojAssemblyReference.cache
+/Users/croper/portfolio/AdventOfCode/2019/day1/obj/Debug/netcoreapp2.2/day1.csproj.CoreCompileInputs.cache
+/Users/croper/portfolio/AdventOfCode/2019/day1/obj/Debug/netcoreapp2.2/day1.AssemblyInfoInputs.cache
+/Users/croper/portfolio/AdventOfCode/2019/day1/obj/Debug/netcoreapp2.2/day1.AssemblyInfo.cs
+/Users/croper/portfolio/AdventOfCode/2019/day1/obj/Debug/netcoreapp2.2/day1.dll
+/Users/croper/portfolio/AdventOfCode/2019/day1/obj/Debug/netcoreapp2.2/day1.pdb
