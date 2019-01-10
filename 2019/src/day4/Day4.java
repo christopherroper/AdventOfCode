@@ -11,8 +11,7 @@ import java.util.Scanner;
 public class Day4 {
 
 	public static void main(String[] args) throws FileNotFoundException {
-		// TODO Auto-generated method stub
-
+		
 		File inputFile = new File("src/day4/input.txt"); 
 	    Scanner inputScanner = new Scanner(inputFile);
 	    ArrayList<String> logs = new ArrayList<>();
@@ -32,6 +31,10 @@ public class Day4 {
 	    
 	    int currentShiftFellAsleepTime = 0;
 	    String guardID = "";
+	    
+	    String sleepiestGuardIDByMinute = "";
+	    int sleepiestMinute = 0;
+	    int sleepiestMinuteMaxCount = 0;
 
 	    for(String s : logs) {
 	    	String [] parsed = s.split(" ");
@@ -56,7 +59,13 @@ public class Day4 {
 	    		for(int i = currentShiftFellAsleepTime; i < time; i++) {
 	    			if(guards.get(guardID).minuteCounts.containsKey(i)) {
 	    				int minuteCount = guards.get(guardID).minuteCounts.get(i);
-	    				guards.get(guardID).minuteCounts.replace(i, minuteCount + 1);
+	    				minuteCount++;
+	    				guards.get(guardID).minuteCounts.replace(i, minuteCount);
+	    				if(minuteCount > sleepiestMinuteMaxCount) {
+	    					sleepiestMinuteMaxCount = minuteCount;
+	    					sleepiestMinute = i;
+	    					sleepiestGuardIDByMinute = guards.get(guardID).ID;
+	    				}
 	    			} else {
 	    				guards.get(guardID).minuteCounts.put(i, 1);
 	    			}
@@ -64,9 +73,6 @@ public class Day4 {
 	    	}
 	    }
 	    
-	    System.out.println("sleepiest guard:");
-	    System.out.println(sleepiestGuardID);
-//	    System.out.println(sleepiestGuardTotalSleepTime);
 	    int sleepiestTime = 0;
 	    int sleepiestTimeCount = 0;
 	    Guard sleepiestGuard = guards.get(sleepiestGuardID);
@@ -76,8 +82,16 @@ public class Day4 {
 	    		sleepiestTimeCount = e.getValue();
 	    	}
 	    }
+	    //part 1
 	    System.out.println("sleepiest time:");
 	    System.out.println(sleepiestTime);
-//	    System.out.println(sleepiestTimeCount);
+	    System.out.println("sleepiest guard:");
+	    System.out.println(sleepiestGuardID);
+	    
+	    //part 2
+	    System.out.println("sleepiest minute");
+	    System.out.println(sleepiestMinute);
+	    System.out.println("sleepiest guard at that minute");
+	    System.out.println(sleepiestGuardIDByMinute);
 	}
 }
